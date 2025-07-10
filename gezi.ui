@@ -1,0 +1,831 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>magezi</class>
+ <widget class="QMainWindow" name="magezi">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1391</width>
+    <height>745</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">}/* Eğer centralWidget'a uyguluyorsanız, bu daha yaygın ve önerilen yoldur */
+QWidget {
+    background-color: #90A4AE; /* Bir tık daha koyu lacivert/gri tonu */
+}
+
+/* Eğer ana pencereniz bir QMainWindow ise ve direkt ona uyguluyorsanız */
+QMainWindow {
+    background-color: #90A4AE; /* Bir tık daha koyu lacivert/gri tonu */
+}
+
+/* Genellikle önerilmeyen, ancak her şeyi etkileyen genel bir seçici */
+/*
+* {
+    background-color: #90A4AE;
+}
+*/QPushButton {
+    background-color: #E6D3A0; /* Soluk altın sarısı tonu */
+    color: #3C4752; /* Yazı rengini koyu lacivert/gri yapın, okunurluk için */
+    border: 1px solid #CDBA84; /* Kenarlık rengi (soluk altının biraz koyusu) */
+    border-radius: 5px; /* Köşeleri yuvarla (isteğe bağlı) */
+    padding: 5px; /* İç boşluk (isteğe bağlı) */
+}
+QPushButton:hover { /* Fare üzerine geldiğinde renk değiştirme */
+    background-color: #F0E2C0; /* Fare üstünde biraz daha açık soluk altın */
+}
+QPushButton:pressed { /* Butona tıklandığında renk değiştirme */
+    background-color: #D2C092; /* Tıklandığında biraz daha koyu soluk altın */
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">/* Eğer centralWidget'a uyguluyorsanız, bu daha yaygın ve önerilen yoldur */
+QWidget {
+    background-color: #90A4AE; /* Bir tık daha koyu lacivert/gri tonu */
+}
+
+/* Eğer ana pencereniz bir QMainWindow ise ve direkt ona uyguluyorsanız */
+QMainWindow {
+    background-color: #90A4AE; /* Bir tık daha koyu lacivert/gri tonu */
+}
+
+/* Genellikle önerilmeyen, ancak her şeyi etkileyen genel bir seçici */
+/*
+* {
+    background-color: #90A4AE;
+}
+*/QPushButton {
+    background-color: #E6D3A0; /* Soluk altın sarısı tonu */
+    color: #3C4752; /* Yazı rengini koyu lacivert/gri yapın, okunurluk için */
+    border: 1px solid #CDBA84; /* Kenarlık rengi (soluk altının biraz koyusu) */
+    border-radius: 5px; /* Köşeleri yuvarla (isteğe bağlı) */
+    padding: 5px; /* İç boşluk (isteğe bağlı) */
+}
+QPushButton:hover { /* Fare üzerine geldiğinde renk değiştirme */
+    background-color: #F0E2C0; /* Fare üstünde biraz daha açık soluk altın */
+}
+QPushButton:pressed { /* Butona tıklandığında renk değiştirme */
+    background-color: #D2C092; /* Tıklandığında biraz daha koyu soluk altın */
+}</string>
+   </property>
+   <widget class="QGroupBox" name="gbgezi">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>10</y>
+      <width>611</width>
+      <height>571</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>Gezi Planlarım</string>
+    </property>
+    <widget class="QTableWidget" name="tabseh">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>150</y>
+       <width>591</width>
+       <height>261</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit {
+    background-color: #3C4752; /* Daha açık lacivert/gri */
+    color: white; /* Yazı rengi beyaz */
+    border: 1px solid #5A6A78; /* Kenarlık */
+    border-radius: 3px;
+    padding: 2px;
+}</string>
+     </property>
+     <property name="alternatingRowColors">
+      <bool>true</bool>
+     </property>
+     <attribute name="horizontalHeaderDefaultSectionSize">
+      <number>148</number>
+     </attribute>
+     <attribute name="horizontalHeaderMinimumSectionSize">
+      <number>50</number>
+     </attribute>
+     <attribute name="verticalHeaderDefaultSectionSize">
+      <number>50</number>
+     </attribute>
+     <attribute name="verticalHeaderHighlightSections">
+      <bool>true</bool>
+     </attribute>
+     <attribute name="verticalHeaderMinimumSectionSize">
+      <number>33</number>
+     </attribute>
+     <column>
+      <property name="text">
+       <string>Şehir</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Tur Adı</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Başlangıç Tarihi</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Bitiş Tarihi</string>
+      </property>
+     </column>
+    </widget>
+    <widget class="QPushButton" name="pbara">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>90</y>
+       <width>101</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Ara</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="liara">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>90</y>
+       <width>191</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit {
+    background-color: white;
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="gbyen">
+    <property name="geometry">
+     <rect>
+      <x>680</x>
+      <y>10</y>
+      <width>611</width>
+      <height>571</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>Yeni Gezi Oluştur</string>
+    </property>
+    <widget class="QPushButton" name="pbek">
+     <property name="geometry">
+      <rect>
+       <x>480</x>
+       <y>400</y>
+       <width>101</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Ekle</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pbsil">
+     <property name="geometry">
+      <rect>
+       <x>480</x>
+       <y>440</y>
+       <width>101</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Sil</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pbkay">
+     <property name="geometry">
+      <rect>
+       <x>240</x>
+       <y>530</y>
+       <width>121</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Kaydet ve Listele</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labseh">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>430</y>
+       <width>71</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Şehir seç</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="cseh">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>440</y>
+       <width>131</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>Adana</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Ağrı</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Aksaray</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Ankara</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Artvin</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Aydın</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Balıkesir</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Bartın </string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Batman</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Bitlis</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Bodrum</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Bolu</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Bursa</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Burdur</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Çanakkale</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Denizli</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Diyarbakır</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Düzce</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Edirne</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Elazığ</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Erzincan</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Erzurum</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Eskişehir</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Gaziantep</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Giresun</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Hakkari</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Hatay</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Isparta</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>İstanbul</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>İzmir</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Kars</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Kastamonu</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Kayseri</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Kocaeli</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Konya</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Kütahya</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Malatya</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Manisa</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Mardin</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Mersin</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Muğla</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Muş</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Nevşehir</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Ordu</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Rize</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Sakarya</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Samsun</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Şanlıurfa</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Sinop</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Şırnak</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Tekirdağ</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Trabzon</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Uşak</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Van</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Zonguldak</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Ardahan</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Bingöl</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Adıyaman</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Antalya</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Sivas</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QComboBox" name="ctur">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>490</y>
+       <width>131</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>Mavi Rota</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Tarih Yolu</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Ege Serüveni</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Akdeniz Esintisi</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Karadeniz Seyahati</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>İç Anadolu Macerası</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Doğu Masalı</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Gurme Turu</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Kültür Şefi</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Vadi Yolculuğu</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Kapadokya Rüyası</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Yeşil Yolculuk</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Buzul Tırmanışı</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Keşif Gezisi</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Antik Diyar</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLabel" name="labtur">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>490</y>
+       <width>55</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Tur Seç</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labbil">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>581</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Başlangıç ve bitiş tarihini takvim üzerinden seçin.Geziler en fazla 3 günlüktür.</string>
+     </property>
+    </widget>
+    <widget class="QCalendarWidget" name="calendarWidget">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>100</y>
+       <width>392</width>
+       <height>251</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <italic>false</italic>
+       <bold>true</bold>
+       <underline>false</underline>
+      </font>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="gridVisible">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labbastar">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>380</y>
+       <width>101</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>8</pointsize>
+       <kerning>true</kerning>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>Başlangıç Tarihi</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labbittar">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>380</y>
+       <width>71</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Bitiş Tarihi</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labbas">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>380</y>
+       <width>101</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>1</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labbit">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>370</x>
+       <y>380</y>
+       <width>101</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>2</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pbd">
+     <property name="geometry">
+      <rect>
+       <x>480</x>
+       <y>480</y>
+       <width>101</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Tarih Güncelle</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="pbc">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>600</y>
+      <width>121</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Çıkış</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1391</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

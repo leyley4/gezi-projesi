@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>makul</class>
+ <widget class="QMainWindow" name="makul">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>734</width>
+    <height>623</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>120</width>
+    <height>40</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <kerning>true</kerning>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="toolTip">
+   <string/>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* Eğer centralWidget'a uyguluyorsanız, bu daha yaygın ve önerilen yoldur */
+QWidget {
+    background-color: #90A4AE; /* Bir tık daha koyu lacivert/gri tonu */
+}
+
+/* Eğer ana pencereniz bir QMainWindow ise ve direkt ona uyguluyorsanız */
+QMainWindow {
+    background-color: #90A4AE; /* Bir tık daha koyu lacivert/gri tonu */
+}
+
+/* Genellikle önerilmeyen, ancak her şeyi etkileyen genel bir seçici */
+/*
+* {
+    background-color: #90A4AE;
+}
+*/QPushButton {
+    background-color: #E6D3A0; /* Soluk altın sarısı tonu */
+    color: #3C4752; /* Yazı rengini koyu lacivert/gri yapın, okunurluk için */
+    border: 1px solid #CDBA84; /* Kenarlık rengi (soluk altının biraz koyusu) */
+    border-radius: 5px; /* Köşeleri yuvarla (isteğe bağlı) */
+    padding: 5px; /* İç boşluk (isteğe bağlı) */
+}
+QPushButton:hover { /* Fare üzerine geldiğinde renk değiştirme */
+    background-color: #F0E2C0; /* Fare üstünde biraz daha açık soluk altın */
+}
+QPushButton:pressed { /* Butona tıklandığında renk değiştirme */
+    background-color: #D2C092; /* Tıklandığında biraz daha koyu soluk altın */
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="labturley">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>50</y>
+      <width>131</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../yeni.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="gb">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>50</y>
+      <width>511</width>
+      <height>471</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string/>
+    </property>
+    <widget class="QLabel" name="labkulad">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>180</y>
+       <width>101</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Kullanıcı Adı</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>330</y>
+       <width>91</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Şifre</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="liad">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>180</y>
+       <width>181</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit {
+    background-color: white;
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="placeholderText">
+      <string>Lütfen adınızı soyadınızı girin</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lisif">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>320</y>
+       <width>181</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit {
+    background-color: white;
+}</string>
+     </property>
+     <property name="echoMode">
+      <enum>QLineEdit::Password</enum>
+     </property>
+     <property name="placeholderText">
+      <string>Şifreniz en az 8 karakter içermelidir</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="chs">
+     <property name="geometry">
+      <rect>
+       <x>350</x>
+       <y>320</y>
+       <width>103</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Şifreyi göster</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pbgir">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>390</y>
+       <width>121</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>80</width>
+       <height>30</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>Giriş yap</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labkullan">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>90</y>
+       <width>221</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+       <horstretch>20</horstretch>
+       <verstretch>10</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="baseSize">
+      <size>
+       <width>0</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>15</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Kullanıcı Girişi</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labepos">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>260</y>
+       <width>91</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>E-posta</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lipos">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>250</y>
+       <width>181</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit {
+    background-color: white;
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="placeholderText">
+      <string>Lütfen geçerli bir e-posta girin</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>734</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <action name="actionkategori">
+   <property name="text">
+    <string>Kategori Tanımları</string>
+   </property>
+  </action>
+  <action name="actionurun">
+   <property name="text">
+    <string>Ürün Tanımları</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
